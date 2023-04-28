@@ -5,6 +5,7 @@ export const UserCard = ({ users, onClickPlus, onClickMinus }) => {
   var num = users.followers;
   var re = /\B(?=(\d{3})+(?!\d))/g;
   var newstr = num.toString().replace(re, ',');
+  console.log(num);
 
   return (
     <Stats>
