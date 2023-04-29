@@ -1,4 +1,12 @@
-import { ImgRound, Stats, Text, Tweets, Plus, Minus } from './UserCard.styled';
+import {
+  ImgRound,
+  Stats,
+  Text,
+  Tweets,
+  Plus,
+  Minus,
+  Avatar,
+} from './UserCard.styled';
 
 export const UserCard = ({ users, onClickPlus, onClickMinus }) => {
   // insert coma in followers
@@ -9,7 +17,7 @@ export const UserCard = ({ users, onClickPlus, onClickMinus }) => {
   return (
     <Stats>
       <ImgRound>
-        <img src={users.avatar} alt={users.user} />
+        <Avatar src={users.avatar} alt={users.user} />
       </ImgRound>
       <Tweets>
         {users.tweets}

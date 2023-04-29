@@ -62,3 +62,9 @@ export const Minus = styled.button`
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   cursor: pointer;
 `;
+
+export const Avatar = styled.img`
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+`;
