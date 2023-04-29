@@ -1,8 +1,14 @@
 import styled from 'styled-components';
 
-export const List = styled.ul`
-  width: 1200px;
+export const Wrapper = styled.div`
   display: flex;
+  justify-content: center;
+`;
+
+export const List = styled.ul`
+  width: 1280px;
+  display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 20px;
 `;
