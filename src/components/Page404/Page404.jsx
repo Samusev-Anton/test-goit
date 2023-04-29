@@ -1,5 +1,9 @@
 // import svg from '../../images/bro.svg';
-import { NotFoundPageImg, Wraper, TextWrap } from './Page404.styled';
+import {
+  // NotFoundPageImg,
+  // Wraper,
+  TextWrap,
+} from './Page404.styled';
 // import { MainPageTitle } from '../MainPageTitle/MainPageTitle/MainPageTitle';
 
 export const NullPage = () => {
