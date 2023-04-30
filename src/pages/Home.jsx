@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import background from '../images/1550992813_25.jpg';
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
   return (
@@ -9,6 +10,7 @@ export const Home = () => {
         <Text>
           You are on a site where superheroes share stories about their exploits
         </Text>
+        <GoTo to="/follows">go ahead!</GoTo>
       </Picture>
     </Wrapper>
   );
@@ -42,6 +44,7 @@ export const Title = styled.h2`
   font-size: 50px;
   font-weight: 700;
   line-height: 60px;
+  margin-bottom: 50px;
   color: white;
 `;
 
@@ -50,4 +53,13 @@ export const Text = styled.p`
   font-weight: 500;
   line-height: 24px;
   color: white;
+`;
+
+export const GoTo = styled(Link)`
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: underline;
 `;
