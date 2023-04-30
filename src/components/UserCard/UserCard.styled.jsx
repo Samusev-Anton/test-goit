@@ -9,6 +9,9 @@ export const ImgRound = styled.div`
   top: 180px;
   left: 40%;
   background: black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
+    inset 0px 3.43693px 2.5777px #fbf8ff;
 `;
 
 export const Stats = styled.div`
@@ -46,8 +49,10 @@ export const Plus = styled.button`
   padding: 14px 56px;
   color: #373737;
   background-color: #ebd8ff;
-  box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   cursor: pointer;
+  &:hover {
+    box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
+  }
 `;
 
 export const Minus = styled.button`
@@ -59,8 +64,10 @@ export const Minus = styled.button`
   padding: 14px 56px;
   color: #373737;
   background-color: #5cd3a8;
-  box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   cursor: pointer;
+  &:hover {
+    box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
+  }
 `;
 
 export const Avatar = styled.img`

@@ -92,7 +92,11 @@ export const Users = () => {
 
   return (
     <div
-      style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        flexDirection: 'column',
+      }}
     >
       <h2 style={{ textAlign: 'center' }}>Tweets of famoust herous</h2>
       <FilterButton filterFollows={filterFollows} />

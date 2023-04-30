@@ -9,8 +9,10 @@ export const Btn = styled.button`
   padding: 14px 56px;
   color: #373737;
   background-color: #ebd8ff;
-  box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   margin-top: 25px;
   margin-bottom: 25px;
   cursor: pointer;
+  &:hover {
+    box-shadow: 0px 1px 12px 5px rgba(230, 207, 207, 0.53);
+  }
 `;
