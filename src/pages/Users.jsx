@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { slice } from 'lodash';
+import styled from 'styled-components';
 
 import { getUsersApi, changeUserApi } from 'Api/Users';
 import { UsersList } from 'components/UserList/UserList';
@@ -15,12 +16,11 @@ export const Users = () => {
   const initiaUsers = slice(users, 0, index);
   const initialFollows = slice(follows, 0, index);
 
-  // const followsLength = follows && index + 3 >= follows.length;
-  // console.log(followsLength);
+  const followsLength = follows && index + 3 >= follows.length;
 
   const loadMore = () => {
     setIndex(index + 3);
-    if (index + 3 >= users.length || index + 3 >= follows.length) {
+    if (index + 3 >= users.length || followsLength) {
       setIsCompleted(true);
     } else {
       setIsCompleted(false);
@@ -60,11 +60,14 @@ export const Users = () => {
         ? { ...user, followers: user.followers + 1, add: true }
         : user
     );
-    const newFollows = follows.map(user =>
-      user.id === id
-        ? { ...user, followers: user.followers + 1, add: true }
-        : user
-    );
+    if (follows) {
+      const newFollows = follows.map(user =>
+        user.id === id
+          ? { ...user, followers: user.followers + 1, add: true }
+          : user
+      );
+      setFollows(newFollows);
+    }
 
     const userForUpdate = users.find(user => user.id === id);
 
@@ -74,22 +77,24 @@ export const Users = () => {
     };
 
     setUsers(newUsers);
-    setFollows(newFollows);
     changeUserApi(id, change);
   };
 
   const onClickMinus = id => {
-    console.log(id);
     const newUsers = users.map(user =>
       user.id === id
         ? { ...user, followers: user.followers - 1, add: false }
         : user
     );
-    const newFollows = follows.map(user =>
-      user.id === id
-        ? { ...user, followers: user.followers - 1, add: false }
-        : user
-    );
+    if (follows) {
+      const newFollows = follows.map(user =>
+        user.id === id
+          ? { ...user, followers: user.followers - 1, add: false }
+          : user
+      );
+      setFollows(newFollows);
+    }
+
     const userForUpdate = users.find(user => user.id === id);
 
     const change = {
@@ -98,20 +103,11 @@ export const Users = () => {
     };
 
     setUsers(newUsers);
-    setFollows(newFollows);
     changeUserApi(id, change);
   };
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        overflow: 'scroll',
-      }}
-    >
+    <Wrapper>
       <FilterButton filterFollows={filterFollows} />
       {!follows ? (
         <UsersList
@@ -127,6 +123,16 @@ export const Users = () => {
         />
       )}
       <LoadMore loadMore={loadMore} isCompleted={isCompleted} />
-    </div>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.div`
+  padding: 110px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 140px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+`;

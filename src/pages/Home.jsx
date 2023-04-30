@@ -3,14 +3,24 @@ import background from '../images/1550992813_25.jpg';
 
 export const Home = () => {
   return (
-    <Picture>
-      <Title> Hey! Hello!</Title>
-      <Text>
-        You are on a site where superheroes share stories about their exploits
-      </Text>
-    </Picture>
+    <Wrapper>
+      <Picture>
+        <Title> Hey! Hello!</Title>
+        <Text>
+          You are on a site where superheroes share stories about their exploits
+        </Text>
+      </Picture>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.div`
+  padding: 200px 0;
+  height: 100hv;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 const Picture = styled.div`
   padding: 40px;
@@ -19,7 +29,6 @@ const Picture = styled.div`
   align-items: center;
   justify-content: space-around;
 
-  margin-top: 50px;
   width: 1200px;
   height: 700px;
 

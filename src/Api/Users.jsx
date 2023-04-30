@@ -14,7 +14,6 @@ export const getUsersApi = () => {
 };
 
 export const changeUserApi = (id, user) => {
-  console.log(user);
   try {
     return axios
       .put(`/users/${id}`, { add: user.add, followers: user.followers })
