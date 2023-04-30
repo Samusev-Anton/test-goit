@@ -128,10 +128,10 @@ export const Users = () => {
 };
 
 const Wrapper = styled.div`
-  padding: 110px 0;
+  padding: 30px 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 140px;
+  gap: 20px;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;

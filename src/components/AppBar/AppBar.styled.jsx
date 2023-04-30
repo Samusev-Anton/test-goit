@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
     #5736a3 54.28%,
     #4b2a99 78.99%
   );
-  padding: 30px 0;
+  padding: 20px 0;
 `;
 
 export const Container = styled.div`
@@ -17,7 +17,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-around;
   margin: 0 auto;
-  padding: 25px;
+  padding: 15px;
 `;
 
 export const Marv = styled.img`

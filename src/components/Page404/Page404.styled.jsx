@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const NotFoundPageImg = styled.img`
   display: block;
-  height: 500px;
+  height: 280px;
 `;
 
 export const Wraper = styled.div`
-  padding: 250px 0;
+  padding: 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,21 +14,21 @@ export const Wraper = styled.div`
 `;
 
 export const TextWrap = styled.div`
-  margin-top: 70px;
+  margin-top: 42px;
   text-align: center;
 `;
 
 export const Title = styled.h2`
-  font-size: 60px;
-  font-weight: 700;
-  line-height: 24px;
-  margin-bottom: 50px;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  margin-bottom: 30px;
   color: white;
 `;
 
 export const Text = styled.p`
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 24px;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 30px;
   color: white;
 `;

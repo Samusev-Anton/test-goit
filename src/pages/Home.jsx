@@ -15,7 +15,7 @@ export const Home = () => {
 };
 
 const Wrapper = styled.div`
-  padding: 200px 0;
+  padding: 80px 0;
   height: 100hv;
   display: flex;
   align-items: center;
@@ -23,14 +23,14 @@ const Wrapper = styled.div`
 `;
 
 const Picture = styled.div`
-  padding: 40px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 
-  width: 1200px;
-  height: 700px;
+  width: 700px;
+  height: 300px;
 
   background-image: url(${background});
   background-repeat: no-repeat;
@@ -39,15 +39,15 @@ const Picture = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 60px;
   color: white;
 `;
 
 export const Text = styled.p`
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
   line-height: 24px;
   color: white;
 `;
