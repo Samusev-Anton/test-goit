@@ -6,7 +6,7 @@ export const FooterWrap = styled.footer`
   align-items: center;
   margin: 0 auto;
   /* max-width: 1280px; */
-  padding: 12px;
+  padding: 20px;
   background: linear-gradient(
     114.99deg,
     #471ca9 -0.99%,
@@ -18,6 +18,7 @@ export const FooterWrap = styled.footer`
 export const FooterTitle = styled.p`
   font-weight: 500;
   font-size: 20px;
+  margin-bottom: 20px;
   color: white;
   cursor: pointer;
 `;

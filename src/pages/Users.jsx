@@ -15,9 +15,11 @@ export const Users = () => {
   const initiaUsers = slice(users, 0, index);
   const initialFollows = slice(follows, 0, index);
 
+  // const followsLength = follows && index + 3 >= follows.length;
+  // console.log(followsLength);
+
   const loadMore = () => {
     setIndex(index + 3);
-    console.log(index);
     if (index + 3 >= users.length || index + 3 >= follows.length) {
       setIsCompleted(true);
     } else {
@@ -34,8 +36,6 @@ export const Users = () => {
   const filterFollows = id => {
     setIndex(3);
     setIsCompleted(false);
-    console.log(index);
-    console.log(follows);
     switch (id) {
       case 'btnAll':
         setFollows(users);
@@ -60,6 +60,11 @@ export const Users = () => {
         ? { ...user, followers: user.followers + 1, add: true }
         : user
     );
+    const newFollows = follows.map(user =>
+      user.id === id
+        ? { ...user, followers: user.followers + 1, add: true }
+        : user
+    );
 
     const userForUpdate = users.find(user => user.id === id);
 
@@ -69,12 +74,18 @@ export const Users = () => {
     };
 
     setUsers(newUsers);
+    setFollows(newFollows);
     changeUserApi(id, change);
   };
 
   const onClickMinus = id => {
     console.log(id);
     const newUsers = users.map(user =>
+      user.id === id
+        ? { ...user, followers: user.followers - 1, add: false }
+        : user
+    );
+    const newFollows = follows.map(user =>
       user.id === id
         ? { ...user, followers: user.followers - 1, add: false }
         : user
@@ -87,6 +98,7 @@ export const Users = () => {
     };
 
     setUsers(newUsers);
+    setFollows(newFollows);
     changeUserApi(id, change);
   };
 
@@ -96,9 +108,10 @@ export const Users = () => {
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'column',
+        justifyContent: 'center',
+        overflow: 'scroll',
       }}
     >
-      <h2 style={{ textAlign: 'center' }}>Tweets of famoust herous</h2>
       <FilterButton filterFollows={filterFollows} />
       {!follows ? (
         <UsersList
