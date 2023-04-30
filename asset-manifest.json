@@ -1,18 +1,20 @@
 {
   "files": {
     "main.css": "/test-goit/static/css/main.7acaea2f.css",
-    "main.js": "/test-goit/static/js/main.7d72faa6.js",
-    "static/js/534.30d01a71.chunk.js": "/test-goit/static/js/534.30d01a71.chunk.js",
+    "main.js": "/test-goit/static/js/main.97b7e0b5.js",
+    "static/js/266.b15d4172.chunk.js": "/test-goit/static/js/266.b15d4172.chunk.js",
     "static/js/132.c973352f.chunk.js": "/test-goit/static/js/132.c973352f.chunk.js",
+    "static/media/[CITYPNG.COM]Marvel Studios White Logo PNG Image - 2774x700.png": "/test-goit/static/media/[CITYPNG.COM]Marvel Studios White Logo PNG Image - 2774x700.fe2544d7e89d23653c92.png",
+    "static/media/space.avif": "/test-goit/static/media/space.5b4399d6f6070d8ec51f.avif",
     "static/media/picture2 1.png": "/test-goit/static/media/picture2 1.032662a2a907475127d7.png",
     "index.html": "/test-goit/index.html",
     "main.7acaea2f.css.map": "/test-goit/static/css/main.7acaea2f.css.map",
-    "main.7d72faa6.js.map": "/test-goit/static/js/main.7d72faa6.js.map",
-    "534.30d01a71.chunk.js.map": "/test-goit/static/js/534.30d01a71.chunk.js.map",
+    "main.97b7e0b5.js.map": "/test-goit/static/js/main.97b7e0b5.js.map",
+    "266.b15d4172.chunk.js.map": "/test-goit/static/js/266.b15d4172.chunk.js.map",
     "132.c973352f.chunk.js.map": "/test-goit/static/js/132.c973352f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.7d72faa6.js"
+    "static/js/main.97b7e0b5.js"
   ]
 }
